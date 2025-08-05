@@ -4,6 +4,6 @@ import { ObjectType, Field, Int } from '@nestjs/graphql';
 export class Item {
 
   @Field(() => Int, { description: 'Example field (placeholder)' })
-  exampleField: number;
+  exampleField:number;
   
 }

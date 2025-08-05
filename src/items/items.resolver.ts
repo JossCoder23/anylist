@@ -20,7 +20,7 @@ export class ItemsResolver {
   }
 
   @Query(() => Item, { name: 'item' })
-  findOne(@Args('id', { type: () => Int }) id: number) {
+  findOne(@Args('id', { type: () => Int }) id:number) {
     return this.itemsService.findOne(id);
   }
 
@@ -30,7 +30,7 @@ export class ItemsResolver {
   }
 
   @Mutation(() => Item)
-  removeItem(@Args('id', { type: () => Int }) id: number) {
+  removeItem(@Args('id', { type: () => Int }) id:number) {
     return this.itemsService.remove(id);
   }
 
