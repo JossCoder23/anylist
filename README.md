@@ -3,16 +3,16 @@
 </p>
 
 # Base de Datos
-1. Descargar la BD ```docker pull postgres:14.4```
+1. Descargar la BD ```docker pull postgres:14.3```
 
 # Pre Dev
 1. Instalar nest ```npm i -g @nestjs/cli```
 2. Crear un proyecto en nest ```nest new [project]```
-3. Dependencias necesarias ```yarn add @nestjs/graphql @nestjs/apollo @apollo/server@^4.12.2 graphql apollo-server-express class-validator class-transformer apollo-server-core @nestjs/config @nestjs/typeorm typeorm pg [name_basededatos]```
+3. Dependencias necesarias ```yarn add @nestjs/graphql @nestjs/apollo @apollo/server@^4.12.2 graphql apollo-server-express class-validator class-transformer apollo-server-core @nestjs/config @nestjs/typeorm typeorm pg [name_basededatos] dotenv```
 
 # Dev
 1. Clonar el proyecto
-2. Copia el ```.env.template``` y renombar a ```.env```
+2. Copia el ```.env.template``` y RENOMBRAR a ```.env```
 3. Ejecutar: ```yarn install```
 4. Ejecutar la imagen de BD: ```docker-compose up -d```
 5. Levantar el servidor: ```yarn start:dev```
