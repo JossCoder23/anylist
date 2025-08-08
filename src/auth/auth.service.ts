@@ -1,25 +1,41 @@
 import { Injectable } from '@nestjs/common';
-import { SignupInput } from './dto/inputs/signup.input';
+import { SignupInput, LoginInput } from './dto/inputs';
 import { AuthResponse } from './types/auth-response.type';
-import { User } from '../users/entities/user.entity';
+import { UsersService } from 'src/users/users.service';
+import { User } from 'src/users/entities/user.entity';
 
 @Injectable()
 export class AuthService {
 
-    constructor(){}
+    constructor(
+        private readonly usersService:UsersService
+    ){}
 
     async signup( signupInput:SignupInput ):Promise<AuthResponse> {
 
-        // Todo: crear usuario
+        const user = await this.usersService.create( signupInput );
         // Todo: crear JWT
-        
-        throw new Error(`No implemented`);
-
-        // return {
-        //     token: 'asadsasd',
-        //     user: new User()
-        // }
+        const token = 'ABC123';
+        return { token, user }
 
     }
+
+    async login( loginInput:LoginInput ):Promise<AuthResponse> {
+
+
+        const { email, password } = loginInput;
+        const user = await this.usersService.findOneByEmail( email );
+        
+
+
+        const token = 'ABC123';
+
+        return {
+            token,
+            user
+        }
+
+    }
+
 
 }

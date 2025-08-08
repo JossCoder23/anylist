@@ -8,7 +8,8 @@
 # Pre Dev
 1. Instalar nest ```npm i -g @nestjs/cli```
 2. Crear un proyecto en nest ```nest new [project]```
-3. Dependencias necesarias ```yarn add @nestjs/graphql @nestjs/apollo @apollo/server@^4.12.2 graphql apollo-server-express class-validator class-transformer apollo-server-core @nestjs/config @nestjs/typeorm typeorm pg [name_basededatos] dotenv```
+3. Dependencias necesarias ```yarn add @nestjs/graphql @nestjs/apollo @apollo/server@^4.12.2 graphql apollo-server-express class-validator class-transformer apollo-server-core @nestjs/config @nestjs/typeorm typeorm pg [name_basededatos] dotenv bcrypt```
+4. Dev Dependencies necesarias ```yarn add -D @types/bcrypt```
 
 # Dev
 1. Clonar el proyecto
